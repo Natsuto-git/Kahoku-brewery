@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tokyo Sake Terroir Journey – Brewery-Hosted Masterclass | Kahoku Brewery</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="description"
+    content="Experience an authentic sake journey at Kahoku Brewery. Join our exclusive masterclass featuring premium sake tasting, traditional brewing insights, and cultural immersion. Book your unforgettable sake experience today."
+  />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              50: '#e8edf5',
+              100: '#c5d1e8',
+              200: '#9fb3d9',
+              300: '#7995ca',
+              400: '#5377bb',
+              500: '#2d59ac',
+              600: '#1a365d',
+              700: '#152c4d',
+              800: '#0f1f35',
+              900: '#0a1628',
+              950: '#060d18',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts - Japanese traditional style (similar to Kahoku Brewery website) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3vy1YsQ50v0ASV8N72Vf0C4D6nq5VdY3W5kL8R4z0zMwQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+    media="print"
+    onload="this.media='all'"
+  />
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"></noscript>
+
+  <style>
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: 'Shippori Mincho B1', 'Zen Old Mincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'Yu Mincho', 'YuMincho', 'MS PMincho', 'MS 明朝', serif;
+      letter-spacing: 0.05em;
+      font-display: swap;
+    }
+    
+    .font-display {
+      font-family: 'Zen Old Mincho', 'Shippori Mincho B1', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', 'Yu Mincho', 'YuMincho', 'MS PMincho', 'MS 明朝', serif;
+      letter-spacing: 0.1em;
+      font-display: swap;
+    }
+    
+    /* Star rating */
+    .star-filled {
+      color: #f59e0b;
+    }
+    .star-empty {
+      color: #4b5563;
+    }
+    
+    /* Elegant divider */
+    .divider-line {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    }
+    
+    /* 青海波 (Seigaiha) - Japanese wave pattern */
+    .pattern-seigaiha {
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='40' viewBox='0 0 80 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg stroke='%23ffffff' stroke-width='0.5' stroke-opacity='0.13'%3E%3Cpath d='M0 20c10 0 20-10 20-20h-2c0 8.837-7.163 16-16 16S-14 8.837-14 0h-2c0 10 10 20 20 20z'/%3E%3Cpath d='M40 20c10 0 20-10 20-20h-2c0 8.837-7.163 16-16 16s-16-7.163-16-16h-2c0 10 10 20 20 20z'/%3E%3Cpath d='M80 20c10 0 20-10 20-20h-2c0 8.837-7.163 16-16 16s-16-7.163-16-16h-2c0 10 10 20 20 20z'/%3E%3Cpath d='M20 40c10 0 20-10 20-20h-2c0 8.837-7.163 16-16 16S6 28.837 6 20H4c0 10 10 20 20 20z'/%3E%3Cpath d='M60 40c10 0 20-10 20-20h-2c0 8.837-7.163 16-16 16s-16-7.163-16-16h-2c0 10 10 20 20 20z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    /* 麻の葉 (Asanoha) - Hemp leaf pattern */
+    .pattern-asanoha {
+      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='0.5' stroke-opacity='0.11'%3E%3Cpath d='M30 0L30 30M0 15L30 30L60 15M0 45L30 30L60 45M30 30L30 60M0 15L30 0L60 15M0 45L30 60L60 45'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    /* 七宝 (Shippo) - Interlocking circles pattern */
+    .pattern-shippo {
+      background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='0.5' stroke-opacity='0.12'%3E%3Ccircle cx='20' cy='20' r='15'/%3E%3Ccircle cx='0' cy='20' r='15'/%3E%3Ccircle cx='40' cy='20' r='15'/%3E%3Ccircle cx='20' cy='0' r='15'/%3E%3Ccircle cx='20' cy='40' r='15'/%3E%3C/g%3E%3C/svg%3E");
+    }
+    
+    /* Decorative corner for Japanese feel */
+    .jp-corner::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      border-top: 1px solid rgba(251, 191, 36, 0.3);
+      border-right: 1px solid rgba(251, 191, 36, 0.3);
+    }
+    .jp-corner::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      border-bottom: 1px solid rgba(251, 191, 36, 0.3);
+      border-left: 1px solid rgba(251, 191, 36, 0.3);
+    }
+    
+    /* Fade in animation for reviews */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Animate review items when details is open */
+    .review-item {
+      opacity: 0;
+    }
+    
+    details[open] .review-item {
+      animation: fadeIn 0.4s ease-out forwards;
+    }
+    
+    /* Stagger animation delays for each review */
+    details[open] .review-item:nth-child(1) {
+      animation-delay: 0.5s;
+    }
+    details[open] .review-item:nth-child(2) {
+      animation-delay: 1s;
+    }
+    details[open] .review-item:nth-child(3) {
+      animation-delay: 1.5s;
+    }
+    details[open] .review-item:nth-child(4) {
+      animation-delay: 2s;
+    }
+    
+    /* Fade in from bottom animation for hero section */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    /* Pure fade in animation (front-facing) for main title */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    
+    .hero-animate {
+      animation: fadeInUp 1s ease-out;
+    }
+    
+    .hero-animate-delay-1 {
+      animation: fadeInUp 1s ease-out 0.3s both;
+    }
+    
+    .hero-title-fade {
+      animation: fadeIn 4s ease-out 0.6s both;
+    }
+    
+    .hero-animate-delay-3 {
+      animation: fadeInUp 1s ease-out 0.9s both;
+    }
+    
+    /* Glow animation for journey steps */
+    @keyframes glow {
+      0% {
+        border-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 0 0 rgba(251, 191, 36, 0);
+      }
+      50% {
+        border-color: rgba(251, 191, 36, 0.6);
+        background-color: rgba(251, 191, 36, 0.15);
+        box-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
+      }
+      100% {
+        border-color: rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 0 0 rgba(251, 191, 36, 0);
+      }
+    }
+    
+    .journey-step {
+      transition: all 0.3s ease;
+    }
+    
+    .journey-step.animate-glow {
+      animation: glow 4s ease-in-out;
+    }
+    
+    /* Sake icon floating animation (酒マークがゆらゆら揺れる) */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0) rotate(0deg);
+      }
+      25% {
+        transform: translateY(-8px) rotate(2deg);
+      }
+      50% {
+        transform: translateY(-12px) rotate(0deg);
+      }
+      75% {
+        transform: translateY(-8px) rotate(-2deg);
+      }
+    }
+    
+    .sake-icon-float {
+      animation: float 4s ease-in-out infinite;
+      will-change: transform;
+    }
+    
+    /* Rotating decorative circles */
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    
+    .rotate-slow {
+      animation: rotate 30s linear infinite;
+      will-change: transform;
+    }
+    
+    /* Card hover lift effect */
+    .card-lift {
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+      will-change: transform;
+    }
+    
+    .card-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(251, 191, 36, 0.2);
+    }
+    
+    /* Scroll fade in animation */
+    @keyframes scrollFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .scroll-fade-in {
+      opacity: 0;
+      will-change: opacity, transform;
+    }
+    
+    .scroll-fade-in.visible {
+      animation: scrollFadeIn 0.8s ease-out forwards;
+      will-change: auto;
+    }
+  </style>
+</head>
+<body class="bg-navy-950 text-gray-100 antialiased">
+  <!-- Page Wrapper -->
+  <div class="min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="border-b border-white/10 sticky top-0 z-40 bg-navy-950/95 backdrop-blur">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+        <div class="flex items-center">
+          <div class="leading-tight">
+            <div class="font-display font-bold tracking-widest text-white text-base sm:text-lg">
+              河 北 酒 造
+            </div>
+            <div class="text-xs text-gray-400 hidden sm:block tracking-wider">
+              Kahoku Sake Brewery
+            </div>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-6 text-sm">
+          <a href="#highlights" class="text-gray-300 hover:text-white font-medium transition">Highlights</a>
+          <a href="#experience" class="text-gray-300 hover:text-white font-medium transition">Experience</a>
+          <a href="#included" class="text-gray-300 hover:text-white font-medium transition">What's Included</a>
+          <a href="#reviews" class="text-gray-300 hover:text-white font-medium transition">Reviews</a>
+          <a
+            href="#booking"
+            class="inline-flex items-center px-5 py-2.5 border border-white/30 text-white text-sm font-semibold hover:bg-white hover:text-navy-900 transition"
+          >
+            <i class="fa-solid fa-calendar-check mr-2"></i>
+            BOOK NOW
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-1">
+      <!-- Hero Section -->
+      <section class="relative bg-navy-950">
+        <div class="relative w-full min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center pattern-seigaiha">
+          <!-- Subtle gradient overlay -->
+          <div class="absolute inset-0 bg-gradient-to-b from-navy-950/80 via-navy-950/60 to-navy-950"></div>
+          
+          <!-- Japanese decorative elements -->
+          <div class="absolute top-10 left-10 w-20 h-20 border border-amber-400/20 rounded-full opacity-50 rotate-slow"></div>
+          <div class="absolute bottom-20 right-10 w-32 h-32 border border-amber-400/10 rounded-full opacity-50 rotate-slow" style="animation-duration: 40s; animation-direction: reverse;"></div>
+          <div class="absolute top-1/3 right-1/4 w-16 h-16 border border-white/10 rounded-full rotate-slow" style="animation-duration: 50s;"></div>
+          
+          <div class="relative z-10 text-center px-4 max-w-4xl mx-auto py-20">
+            <!-- Japanese mon (family crest) style decorative element -->
+            <div class="w-16 h-16 mx-auto mb-8 border border-amber-400/30 rounded-full flex items-center justify-center hero-animate">
+              <span class="text-amber-400/60 font-display text-2xl sake-icon-float">酒</span>
+            </div>
+            
+            <p class="text-sm sm:text-base text-amber-400/80 tracking-widest mb-6 font-display hero-animate-delay-1">
+              小さな蔵から、大きな感動を
+            </p>
+            
+            <h1 class="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-white leading-relaxed mb-6 tracking-wider hero-title-fade">
+              Tokyo Sake Terroir Journey
+            </h1>
+            
+            <p class="text-lg sm:text-xl md:text-2xl text-gray-300 font-display mb-4 tracking-wide hero-animate-delay-3">
+              Brewery-Hosted Masterclass
+            </p>
+            
+            <p class="text-sm sm:text-base text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed hero-animate-delay-3">
+              日本酒という文化を通じて、自由な発想と共創の力で、まだ見ぬ可能性をひらく<br class="hidden sm:block">
+              Immerse yourself in the art of Japanese sake brewing at Kahoku Brewery.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-6 hero-animate-delay-3">
+              <a
+                href="#booking"
+                class="inline-flex items-center px-8 py-4 border border-amber-400/50 text-white text-base font-medium hover:bg-amber-400 hover:text-navy-900 transition-all duration-300"
+              >
+                <i class="fa-solid fa-calendar-check mr-3"></i>
+                Reserve Your Experience
+              </a>
+              <div class="flex items-center space-x-2 text-gray-400 text-sm">
+                <div class="flex">
+                  <i class="fa-solid fa-star star-filled text-sm"></i>
+                  <i class="fa-solid fa-star star-filled text-sm"></i>
+                  <i class="fa-solid fa-star star-filled text-sm"></i>
+                  <i class="fa-solid fa-star star-filled text-sm"></i>
+                  <i class="fa-solid fa-star star-filled text-sm"></i>
+                </div>
+                <span>5.0 · Exceptional</span>
+              </div>
+            </div>
+            
+            <!-- Decorative line -->
+            <div class="divider-line mx-auto mt-12 hero-animate-delay-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Info Bar -->
+      <section class="bg-navy-900/50 border-y border-amber-400/20 pattern-asanoha">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 relative">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="flex items-center justify-center space-x-3">
+              <i class="fa-solid fa-clock text-amber-400 text-lg"></i>
+              <div class="text-left">
+                <span class="block text-sm font-medium text-white leading-tight">1.5 Hours</span>
+                <span class="block text-xs text-gray-500">Duration</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-center space-x-3">
+              <i class="fa-solid fa-users text-amber-400 text-lg"></i>
+              <div class="text-left">
+                <span class="block text-sm font-medium text-white leading-tight">Max 6 People</span>
+                <span class="block text-xs text-gray-500">Group Size</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-center space-x-3">
+              <i class="fa-solid fa-language text-amber-400 text-lg"></i>
+              <div class="text-left">
+                <span class="block text-sm font-medium text-white leading-tight">EN / JP</span>
+                <span class="block text-xs text-gray-500">Language</span>
+              </div>
+            </div>
+            <div class="flex items-center justify-center space-x-3">
+              <i class="fa-solid fa-ticket text-amber-400 text-lg"></i>
+              <div class="text-left">
+                <span class="block text-sm font-medium text-white leading-tight">Instant</span>
+                <span class="block text-xs text-gray-500">Confirmation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Content Sections -->
+      <section class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-12 md:py-16 space-y-12 md:space-y-16">
+
+        <!-- About the Experience -->
+        <section class="space-y-4">
+          <h2 class="font-display text-xl sm:text-2xl font-medium tracking-wider text-white">
+            About This Experience
+          </h2>
+          <div class="text-gray-400 text-sm leading-relaxed max-w-3xl">
+            <p class="text-white font-medium mb-2">A Sake Experience for Curious Minds</p>
+            <p>
+              This is not a typical sake tasting. Hosted by <span class="text-white">Kahoku Brewery (河北酒造)</span>, a historic sake brewery from Daigo Town, this pairing experience explores terroir through 4 premium sake selections paired with local delicacies and the art of koji brewing.
+            </p>
+            <p class="mt-3">
+              Designed for curious travelers, food lovers, and cultural explorers, this experience explores how sake is enjoyed in Japan—shaped by geography, climate, and everyday life.
+            </p>
+            <p class="text-gray-500 mt-2 text-xs">
+              伝統を受け継ぎながらも、自由な発想で新しい挑戦を続けています。大子町の豊かな自然に囲まれ、寒暖差のある気候の中で丁寧に日本酒を醸しています。
+            </p>
+          </div>
+        </section>
+
+        <!-- Highlights -->
+        <section id="highlights" class="space-y-6">
+          <h2 class="font-display text-xl sm:text-2xl font-medium tracking-wider text-white">
+            Experience Highlights
+          </h2>
+
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-3">
+            <div class="card-lift border border-white/10 bg-white/5 p-4 flex items-center space-x-3 cursor-pointer">
+              <i class="fa-solid fa-wine-bottle text-amber-400 text-lg"></i>
+              <span class="text-white text-sm">4 Premium Sake Tastings</span>
+            </div>
+            <div class="card-lift border border-white/10 bg-white/5 p-4 flex items-center space-x-3 cursor-pointer">
+              <i class="fa-solid fa-thermometer-half text-amber-400 text-lg"></i>
+              <span class="text-white text-sm">Cold vs. Warm Sake</span>
+            </div>
+            <div class="card-lift border border-white/10 bg-white/5 p-4 flex items-center space-x-3 cursor-pointer">
+              <i class="fa-solid fa-utensils text-amber-400 text-lg"></i>
+              <span class="text-white text-sm">Local Food Pairing</span>
+            </div>
+            <div class="card-lift border border-white/10 bg-white/5 p-4 flex items-center space-x-3 cursor-pointer">
+              <i class="fa-solid fa-flask text-amber-400 text-lg"></i>
+              <span class="text-white text-sm">Koji & Amazake Workshop</span>
+            </div>
+            <div class="card-lift border border-white/10 bg-white/5 p-4 flex items-center space-x-3 cursor-pointer">
+              <i class="fa-solid fa-certificate text-amber-400 text-lg"></i>
+              <span class="text-white text-sm">Sake Terroir Certificate</span>
+            </div>
+            <div class="card-lift border border-white/10 bg-white/5 p-4 flex items-center space-x-3 cursor-pointer">
+              <i class="fa-solid fa-gift text-amber-400 text-lg"></i>
+              <span class="text-white text-sm">Tokkuri & Ochoko Souvenir</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience Timeline -->
+        <section id="experience" class="space-y-6">
+          <h2 class="font-display text-xl sm:text-2xl font-medium tracking-wider text-white">
+            Your Sake Journey <span class="text-gray-500 text-base ml-2">1.5 hours</span>
+          </h2>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3" id="journey-steps">
+            <div class="journey-step border border-white/10 bg-white/5 p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-amber-400 text-xs font-medium">01</span>
+                <span class="text-gray-500 text-xs">20 min</span>
+              </div>
+              <h3 class="text-white text-sm font-medium mb-1">Welcome & Introduction</h3>
+              <p class="text-gray-500 text-xs">Terroir overview & brewery history</p>
+            </div>
+            <div class="journey-step border border-white/10 bg-white/5 p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-amber-400 text-xs font-medium">02</span>
+                <span class="text-gray-500 text-xs">30 min</span>
+              </div>
+              <h3 class="text-white text-sm font-medium mb-1">Premium Sake Tasting</h3>
+              <p class="text-gray-500 text-xs">4 premium sakes with food pairing</p>
+            </div>
+            <div class="journey-step border border-white/10 bg-white/5 p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-amber-400 text-xs font-medium">03</span>
+                <span class="text-gray-500 text-xs">25 min</span>
+              </div>
+              <h3 class="text-white text-sm font-medium mb-1">Cold vs. Warm Comparison</h3>
+              <p class="text-gray-500 text-xs">Temperature impact on flavor</p>
+            </div>
+            <div class="journey-step border border-white/10 bg-white/5 p-4">
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-amber-400 text-xs font-medium">04</span>
+                <span class="text-gray-500 text-xs">15 min</span>
+              </div>
+              <h3 class="text-white text-sm font-medium mb-1">Koji Workshop & Certificate</h3>
+              <p class="text-gray-500 text-xs">Amazake tasting & souvenir</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- What's Included -->
+        <section id="included" class="space-y-6">
+          <h2 class="font-display text-xl sm:text-2xl font-medium tracking-wider text-white">
+            What's Included
+          </h2>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            <!-- Included -->
+            <div class="border border-white/10 bg-white/5 p-5">
+              <div class="flex items-center space-x-2 mb-4">
+                <i class="fa-solid fa-check text-amber-400"></i>
+                <span class="text-white text-sm font-medium">Included</span>
+              </div>
+              <div class="space-y-2 text-xs text-gray-300">
+                <p>✓ 90-minute Japanese sake terroir experience</p>
+                <p>✓ Four premium sake tastings</p>
+                <p>✓ Local food pairings</p>
+                <p>✓ Cold & warm sake comparison</p>
+                <p>✓ Koji workshop & amazake tasting</p>
+                <p>✓ Sake Terroir Certificate</p>
+                <p>✓ Tokkuri & ochoko souvenir</p>
+                <p>✓ Photos during the experience (by phones)</p>
+              </div>
+            </div>
+
+            <!-- Not Included -->
+            <div class="border border-white/10 bg-white/5 p-5">
+              <div class="flex items-center space-x-2 mb-4">
+                <i class="fa-solid fa-xmark text-gray-500"></i>
+                <span class="text-gray-400 text-sm font-medium">Not Included</span>
+              </div>
+              <div class="space-y-2 text-xs text-gray-500">
+                <p>✗ Transportation to the venue</p>
+                <p>✗ Full meals</p>
+                <p>✗ Bottles of sake for sale (you can buy separately)</p>
+                <p>✗ Water bottles</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Important Information -->
+        <section class="space-y-4">
+          <h2 class="font-display text-xl sm:text-2xl font-medium tracking-wider text-white">
+            Important Information
+          </h2>
+
+          <div class="border border-white/10 bg-white/5 p-5 space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4 text-xs text-gray-400">
+              <div>
+                <p class="text-white text-sm mb-2">Know Before You Go</p>
+                <p>• Valid ID required (minimum age: 20)<br>• Not recommended on an empty stomach<br>• Arrive 10 min early</p>
+              </div>
+              <div>
+                <p class="text-white text-sm mb-2">Cancellation</p>
+                <p>• Free cancellation 24h before • Full refund available</p>
+              </div>
+            </div>
+            <div>
+              <p class="text-white text-sm mb-2">Not Suitable For</p>
+              <p class="text-xs text-gray-400">• Pregnant women • People under 20 years</p>
+            </div>
+            <div>
+              <p class="text-white text-sm mb-2">What to Bring</p>
+              <p class="text-xs text-gray-400">• Water • ID card (copy accepted)</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Location -->
+        <section id="location" class="space-y-4">
+          <h2 class="font-display text-xl sm:text-2xl font-medium tracking-wider text-white">
+            Meeting Point
+          </h2>
+
+          <div class="border border-white/10 bg-white/5 p-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div class="flex items-center space-x-4">
+              <i class="fa-solid fa-location-dot text-amber-400 text-lg"></i>
+              <div>
+                <p class="text-white text-sm">Kahoku Brewery (河北酒造)</p>
+                <p class="text-gray-500 text-xs">Address provided upon booking • Free parking available</p>
+              </div>
+            </div>
+            <a
+              href="https://kahokusyuzou.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center px-4 py-2 border border-white/20 text-white text-xs hover:bg-white hover:text-navy-900 transition"
+            >
+              <i class="fa-solid fa-globe mr-2"></i>
+              Official Website
+            </a>
+          </div>
+        </section>
+
+        <!-- Booking & Price -->
+        <section id="booking" class="space-y-6">
+          <h2 class="font-display text-xl sm:text-2xl font-medium tracking-wider text-white">
+            Book Your Experience
+          </h2>
+
+          <div class="relative border border-amber-400/30 bg-amber-400/5 p-6 pattern-shippo jp-corner overflow-hidden">
+            <div class="relative z-10 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+              <div class="flex items-center space-x-6">
+                <div>
+                  <div class="text-xs text-amber-400/80 mb-1">Price per person</div>
+                  <div class="flex items-baseline space-x-2">
+                    <span class="text-lg text-gray-500 line-through">$69</span>
+                    <span class="text-3xl font-display text-white">$55</span>
+                  </div>
+                  <div class="text-xs text-gray-500">~¥8,250 JPY</div>
+                </div>
+                <div class="hidden sm:block h-12 w-px bg-amber-400/20"></div>
+                <div class="hidden sm:flex items-center space-x-4 text-xs text-gray-400">
+                  <span><i class="fa-solid fa-clock text-amber-400 mr-1"></i> 1.5 hours</span>
+                  <span><i class="fa-solid fa-users text-amber-400 mr-1"></i> Max 6</span>
+                  <span><i class="fa-solid fa-bolt text-amber-400 mr-1"></i> Instant confirm</span>
+                </div>
+              </div>
+              <a
+                href="https://www.getyourguide.com/tokyo-l193/tokyo-sake-terroir-journey-brewery-hosted-masterclass-t1167470/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center justify-center px-8 py-4 bg-amber-400 text-navy-900 font-medium hover:bg-amber-300 transition"
+              >
+                <i class="fa-solid fa-calendar-check mr-2"></i>
+                BOOK NOW
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section id="reviews" class="space-y-6">
+          <div class="flex items-center justify-between">
+            <h2 class="font-display text-xl sm:text-2xl font-medium tracking-wider text-white">
+              Guest Reviews
+            </h2>
+            <div class="flex items-center space-x-2">
+              <div class="flex">
+                <i class="fa-solid fa-star star-filled text-sm"></i>
+                <i class="fa-solid fa-star star-filled text-sm"></i>
+                <i class="fa-solid fa-star star-filled text-sm"></i>
+                <i class="fa-solid fa-star star-filled text-sm"></i>
+                <i class="fa-solid fa-star star-filled text-sm"></i>
+              </div>
+              <span class="text-white text-sm">5.0</span>
+              <span class="text-gray-500 text-xs">(47)</span>
+            </div>
+          </div>
+
+          <!-- Featured Review -->
+          <div class="border border-white/10 bg-white/5 p-5">
+            <div class="flex items-start justify-between mb-3">
+              <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-amber-400/20 flex items-center justify-center text-amber-400 font-medium text-sm">
+                  M
+                </div>
+                <div>
+                  <div class="text-white text-sm">Michael T.</div>
+                  <div class="text-xs text-gray-500">United States • Dec 2024</div>
+                </div>
+              </div>
+              <div class="flex">
+                <i class="fa-solid fa-star star-filled text-xs"></i>
+                <i class="fa-solid fa-star star-filled text-xs"></i>
+                <i class="fa-solid fa-star star-filled text-xs"></i>
+                <i class="fa-solid fa-star star-filled text-xs"></i>
+                <i class="fa-solid fa-star star-filled text-xs"></i>
+              </div>
+            </div>
+            <p class="text-sm text-gray-300 leading-relaxed">
+              "Absolutely incredible experience! The sake tasting was so much more than I expected. Our guide was incredibly knowledgeable. Highly recommend!"
+            </p>
+          </div>
+
+          <!-- Expandable Reviews -->
+          <details class="group">
+            <summary class="cursor-pointer flex items-center justify-center space-x-2 py-3 text-gray-400 hover:text-white transition-all duration-300 text-sm underline hover:no-underline">
+              <span>See more reviews</span>
+              <i class="fa-solid fa-chevron-down group-open:rotate-180 transition-transform duration-300"></i>
+            </summary>
+            
+            <div class="mt-4 space-y-3">
+              <!-- Review 2 -->
+              <div class="review-item border border-white/10 bg-white/5 p-4 hover:border-white/20 transition-all duration-300">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-white/10 flex items-center justify-center text-white text-xs">S</div>
+                    <span class="text-white text-sm">Sophie L.</span>
+                    <span class="text-gray-500 text-xs">France</span>
+                  </div>
+                  <div class="flex"><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i></div>
+                </div>
+                <p class="text-xs text-gray-400">"Une expérience inoubliable! As a wine lover, this masterclass exceeded all expectations."</p>
+              </div>
+
+              <!-- Review 3 -->
+              <div class="review-item border border-white/10 bg-white/5 p-4 hover:border-white/20 transition-all duration-300">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-white/10 flex items-center justify-center text-white text-xs">J</div>
+                    <span class="text-white text-sm">James W.</span>
+                    <span class="text-gray-500 text-xs">Australia</span>
+                  </div>
+                  <div class="flex"><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i></div>
+                </div>
+                <p class="text-xs text-gray-400">"Best cultural experience in Japan! The daiginjo we tasted was absolutely sublime."</p>
+              </div>
+
+              <!-- Review 4 -->
+              <div class="review-item border border-white/10 bg-white/5 p-4 hover:border-white/20 transition-all duration-300">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-white/10 flex items-center justify-center text-white text-xs">E</div>
+                    <span class="text-white text-sm">Emma K.</span>
+                    <span class="text-gray-500 text-xs">UK</span>
+                  </div>
+                  <div class="flex"><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i></div>
+                </div>
+                <p class="text-xs text-gray-400">"A hidden gem! The food pairings were thoughtfully chosen and the atmosphere was authentic."</p>
+              </div>
+
+              <!-- Review 5 -->
+              <div class="review-item border border-white/10 bg-white/5 p-4 hover:border-white/20 transition-all duration-300">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 bg-white/10 flex items-center justify-center text-white text-xs">H</div>
+                    <span class="text-white text-sm">Hans M.</span>
+                    <span class="text-gray-500 text-xs">Germany</span>
+                  </div>
+                  <div class="flex"><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i><i class="fa-solid fa-star star-filled text-xs"></i></div>
+                </div>
+                <p class="text-xs text-gray-400">"Professional yet intimate. The concept of 'terroir' in sake was fascinating to learn about."</p>
+              </div>
+            </div>
+          </details>
+        </section>
+
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-amber-400/20 bg-navy-900/50 pattern-seigaiha">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 relative">
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Logo & Description -->
+          <div>
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 border border-amber-400/40 rounded-full flex items-center justify-center">
+                <span class="text-amber-400/80 font-display text-lg">酒</span>
+              </div>
+              <div>
+                <div class="font-display font-medium text-white text-lg tracking-wider">河 北 酒 造</div>
+                <div class="text-xs text-gray-500">Kahoku Sake Brewery</div>
+              </div>
+            </div>
+            <p class="text-xs text-gray-500 leading-relaxed">
+              Experience the authentic art of Japanese sake brewing with our exclusive masterclass and brewery tour.
+            </p>
+          </div>
+          <!-- Quick Links & Contact - side by side on mobile -->
+          <div class="grid grid-cols-2 gap-4 sm:gap-6 md:col-span-2 md:grid-cols-2 md:justify-items-center">
+            <div class="w-full max-w-[160px]">
+              <div class="font-medium text-amber-400/80 mb-4 tracking-wide text-sm text-center sm:text-left">Quick Links</div>
+              <ul class="space-y-2 text-sm text-center sm:text-left">
+                <li><a href="#highlights" class="text-gray-400 hover:text-amber-400 transition">Highlights</a></li>
+                <li><a href="#experience" class="text-gray-400 hover:text-amber-400 transition">Journey</a></li>
+                <li><a href="#included" class="text-gray-400 hover:text-amber-400 transition">Included</a></li>
+                <li><a href="#reviews" class="text-gray-400 hover:text-amber-400 transition">Reviews</a></li>
+              </ul>
+            </div>
+            <div class="w-full max-w-[160px]">
+              <div class="font-medium text-amber-400/80 mb-4 tracking-wide text-sm text-center sm:text-left">Contact</div>
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-center justify-center sm:justify-start space-x-2 text-gray-400">
+                  <i class="fa-solid fa-globe text-amber-400/60"></i>
+                  <a href="https://kahokusyuzou.com" target="_blank" rel="noopener noreferrer" class="hover:text-amber-400 transition text-xs sm:text-sm">kahokusyuzou.com</a>
+                </li>
+                <li class="flex items-center justify-center sm:justify-start space-x-2 text-gray-400">
+                  <i class="fa-solid fa-language text-amber-400/60"></i>
+                  <span class="text-xs sm:text-sm">EN / JP</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-amber-400/10 mt-8 pt-8 text-center text-xs text-gray-600">
+          <p>© 2024 Kahoku Sake Brewery. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Mobile Sticky Book Now CTA -->
+  <div class="fixed bottom-0 inset-x-0 md:hidden z-50 bg-navy-950/95 backdrop-blur border-t border-white/10">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between space-x-3">
+      <div class="flex flex-col">
+        <div class="text-xs text-gray-500 font-medium uppercase tracking-wide">
+          From
+        </div>
+        <div class="flex items-baseline space-x-1">
+          <span class="text-xs text-gray-500 line-through mr-1">$69</span>
+          <span class="text-lg font-medium text-white">$55</span>
+          <span class="text-[11px] text-gray-500">/ person</span>
+        </div>
+      </div>
+      <a
+        href="https://www.getyourguide.com/tokyo-l193/tokyo-sake-terroir-journey-brewery-hosted-masterclass-t1167470/"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="flex-1 inline-flex items-center justify-center px-4 py-3 bg-white text-navy-900 text-sm font-medium transition hover:bg-gray-100"
+      >
+        <i class="fa-solid fa-calendar-check mr-2"></i>
+        BOOK NOW
+      </a>
+    </div>
+  </div>
+
+  <!-- Smooth scroll script -->
+  <script>
+    (function () {
+      const header = document.querySelector('header');
+      const headerHeight = header ? header.offsetHeight : 0;
+
+      document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
+        anchor.addEventListener('click', function (e) {
+          const targetId = this.getAttribute('href');
+          if (!targetId || targetId === '#') return;
+
+          const targetEl = document.querySelector(targetId);
+          if (!targetEl) return;
+
+          e.preventDefault();
+
+          const rect = targetEl.getBoundingClientRect();
+          const offset = window.pageYOffset + rect.top - (window.innerWidth >= 768 ? headerHeight + 12 : 70);
+
+          window.scrollTo({
+            top: offset,
+            behavior: 'smooth'
+          });
+        });
+      });
+    })();
+  </script>
+
+  <!-- Journey steps glow animation on scroll -->
+  <script>
+    (function() {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initJourneyAnimation);
+      } else {
+        initJourneyAnimation();
+      }
+      
+      function initJourneyAnimation() {
+        const journeySection = document.getElementById('experience');
+        const journeySteps = document.querySelectorAll('#journey-steps .journey-step');
+        let hasAnimated = false;
+
+        if (!journeySection || journeySteps.length === 0) return;
+
+        let ticking = false;
+        
+        function checkIfInCenter() {
+          if (hasAnimated || ticking) return;
+          
+          ticking = true;
+          requestAnimationFrame(function() {
+            const rect = journeySection.getBoundingClientRect();
+            const viewportHeight = window.innerHeight;
+            const sectionCenter = rect.top + rect.height / 2;
+            const viewportCenter = viewportHeight / 2;
+            
+            // セクションの中心がビューポートの中央の±150px以内にあるかチェック
+            const distanceFromCenter = Math.abs(sectionCenter - viewportCenter);
+            
+            if (distanceFromCenter <= 150 && rect.top < viewportCenter && rect.bottom > viewportCenter) {
+              hasAnimated = true;
+              
+              // 1から順に光らせる
+              journeySteps.forEach(function(step, index) {
+                setTimeout(function() {
+                  step.classList.add('animate-glow');
+                  // アニメーション終了後にクラスを削除
+                  setTimeout(function() {
+                    step.classList.remove('animate-glow');
+                  }, 4000);
+                }, index * 1500); // 各ステップを1.5秒ずつ遅らせる
+              });
+            }
+            ticking = false;
+          });
+        }
+
+        // スクロール時にチェック（throttled）
+        window.addEventListener('scroll', checkIfInCenter, { passive: true });
+        
+        // 初回チェック（ページ読み込み時に既に中央にある場合）
+        checkIfInCenter();
+      }
+    })();
+  </script>
+
+  <!-- Scroll fade in animation for sections -->
+  <script>
+    (function() {
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initScrollFadeIn);
+      } else {
+        initScrollFadeIn();
+      }
+      
+      function initScrollFadeIn() {
+        if (!('IntersectionObserver' in window)) {
+          // IntersectionObserverが使えない場合はアニメーションをスキップ
+          document.querySelectorAll('section').forEach(function(section) {
+            section.classList.remove('scroll-fade-in');
+            section.style.opacity = '1';
+          });
+          return;
+        }
+        
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+          entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              // 一度表示されたら監視を停止（パフォーマンス向上）
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        // スクロールフェードインを適用するセクションを監視
+        document.querySelectorAll('section').forEach(function(section) {
+          if (section.id !== 'experience') { // journey stepsは別のアニメーションを使用
+            section.classList.add('scroll-fade-in');
+            observer.observe(section);
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
+

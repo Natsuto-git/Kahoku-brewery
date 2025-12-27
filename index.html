@@ -9,6 +9,37 @@
     name="description"
     content="Experience an authentic sake journey at Kahoku Brewery. Join our exclusive masterclass featuring premium sake tasting, traditional brewing insights, and cultural immersion. Book your unforgettable sake experience today."
   />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://natsuto-git.github.io/Kahoku-brewery/">
+  <meta property="og:title" content="Tokyo Sake Terroir Journey – Brewery-Hosted Masterclass | Kahoku Brewery">
+  <meta property="og:description" content="Experience an authentic sake journey at Kahoku Brewery. Join our exclusive masterclass featuring premium sake tasting, traditional brewing insights, and cultural immersion.">
+  <meta property="og:image" content="https://natsuto-git.github.io/Kahoku-brewery/日本酒背景.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Kahoku Sake Brewery">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://natsuto-git.github.io/Kahoku-brewery/">
+  <meta name="twitter:title" content="Tokyo Sake Terroir Journey – Brewery-Hosted Masterclass">
+  <meta name="twitter:description" content="Experience an authentic sake journey at Kahoku Brewery. Join our exclusive masterclass featuring premium sake tasting.">
+  <meta name="twitter:image" content="https://natsuto-git.github.io/Kahoku-brewery/日本酒背景.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍶</text></svg>">
+  
+  <!-- Performance Optimization: Preconnect to external domains -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+  
+  <!-- Performance Optimization: Preload critical resources -->
+  <link rel="preload" href="日本酒背景.jpg" as="image" type="image/jpeg">
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap" as="style">
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -37,9 +68,7 @@
   </script>
 
   <!-- Google Fonts - Japanese traditional style (similar to Kahoku Brewery website) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700;900&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap" rel="stylesheet" crossorigin>
 
   <!-- Font Awesome CDN -->
   <link
@@ -181,19 +210,27 @@
     }
     
     .hero-animate {
-      animation: fadeInUp 1s ease-out;
+      opacity: 0;
+      animation: fadeInUp 1s ease-out forwards;
+      animation-play-state: paused;
     }
     
     .hero-animate-delay-1 {
+      opacity: 0;
       animation: fadeInUp 1s ease-out 0.3s both;
+      animation-play-state: paused;
     }
     
     .hero-title-fade {
-      animation: fadeIn 4s ease-out 0.6s both;
+      opacity: 0;
+      animation: fadeIn 2s ease-out forwards;
+      animation-play-state: paused;
     }
     
     .hero-animate-delay-3 {
+      opacity: 0;
       animation: fadeInUp 1s ease-out 0.9s both;
+      animation-play-state: paused;
     }
     
     /* Glow animation for journey steps */
@@ -291,37 +328,232 @@
       animation: scrollFadeIn 0.8s ease-out forwards;
       will-change: auto;
     }
+    
+    /* Mobile menu animation */
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .mobile-menu {
+      display: none;
+    }
+    
+    .mobile-menu.active {
+      display: block;
+      animation: slideDown 0.3s ease-out;
+    }
+    
+    /* Hamburger menu icon animation */
+    .hamburger {
+      transition: transform 0.3s ease;
+    }
+    
+    .hamburger.active {
+      transform: rotate(90deg);
+    }
+    
+    
+    /* Header scroll state */
+    header.scrolled {
+      background-color: rgba(6, 13, 24, 0.98);
+      border-bottom-color: rgba(255, 255, 255, 0.15);
+    }
+    
+    /* Loading Screen */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #f5f1e8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+    }
+    
+    .loading-screen.hidden {
+      opacity: 0;
+      visibility: hidden;
+    }
+    
+    /* Loading Image Container */
+    .loading-image-container {
+      position: relative;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .loading-image-wrapper {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      overflow: hidden;
+    }
+    
+    /* Base image (transparent background) - shows outline/gray version */
+    .loading-image-base {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.3;
+      z-index: 1;
+      filter: grayscale(100%) brightness(0.4);
+    }
+    
+    /* Navy blue filled image layer that animates from bottom to top */
+    .loading-image-filled {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      filter: brightness(0) saturate(100%) invert(18%) sepia(55%) saturate(2000%) hue-rotate(200deg) brightness(0.6) contrast(1.2);
+      clip-path: inset(100% 0 0 0);
+      -webkit-clip-path: inset(100% 0 0 0);
+      animation: fillUpNavy 5s ease-in-out infinite;
+    }
+    
+    @keyframes fillUpNavy {
+      0% {
+        clip-path: inset(100% 0 0 0);
+        -webkit-clip-path: inset(100% 0 0 0);
+      }
+      50% {
+        clip-path: inset(0% 0 0 0);
+        -webkit-clip-path: inset(0% 0 0 0);
+      }
+      100% {
+        clip-path: inset(0% 0 0 0);
+        -webkit-clip-path: inset(0% 0 0 0);
+      }
+    }
+    
+    /* Loading brewery name */
+    .loading-brewery-name {
+      color: #1a365d;
+      font-family: 'Zen Old Mincho', serif;
+      font-size: 28px;
+      letter-spacing: 0.4em;
+      margin-top: 30px;
+      font-weight: 900;
+      text-align: center;
+    }
+    
   </style>
+  
+  <!-- Structured Data (JSON-LD) for SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TouristTrip",
+    "name": "Tokyo Sake Terroir Journey – Brewery-Hosted Masterclass",
+    "description": "Experience an authentic sake journey at Kahoku Brewery. Join our exclusive masterclass featuring premium sake tasting, traditional brewing insights, and cultural immersion.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Kahoku Brewery",
+      "alternateName": "河北酒造",
+      "url": "https://kahokusyuzou.com"
+    },
+    "duration": "PT1H30M",
+    "tourBookingPage": "https://www.getyourguide.com/tokyo-l193/tokyo-sake-terroir-journey-brewery-hosted-masterclass-t1167470/",
+    "offers": {
+      "@type": "Offer",
+      "price": "8250",
+      "priceCurrency": "JPY",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.getyourguide.com/tokyo-l193/tokyo-sake-terroir-journey-brewery-hosted-masterclass-t1167470/"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "47"
+    },
+    "touristType": ["Food Lovers", "Cultural Explorers", "Curious Travelers"]
+  }
+  </script>
 </head>
 <body class="bg-navy-950 text-gray-100 antialiased">
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-image-container">
+      <div class="loading-image-wrapper">
+        <img src="IMG_5052.PNG" alt="Loading" class="loading-image-base">
+        <img src="IMG_5052.PNG" alt="Loading" class="loading-image-filled">
+      </div>
+      <div class="loading-brewery-name">河北酒造</div>
+    </div>
+  </div>
+
   <!-- Page Wrapper -->
   <div class="min-h-screen flex flex-col">
 
     <!-- Header -->
-    <header class="border-b border-white/10 sticky top-0 z-40 bg-navy-950/95 backdrop-blur">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-        <div class="flex items-center">
-          <div class="leading-tight">
-            <div class="font-display font-bold tracking-widest text-white text-base sm:text-lg">
-              河 北 酒 造
-            </div>
-            <div class="text-xs text-gray-400 hidden sm:block tracking-wider">
-              Kahoku Sake Brewery
+    <header id="main-header" class="border-b border-white/10 sticky top-0 z-40 bg-navy-950/95 backdrop-blur transition-colors duration-300">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <div class="flex items-center">
+            <div class="leading-tight">
+              <div class="font-display font-bold tracking-widest text-white text-base sm:text-lg">
+                河 北 酒 造
+              </div>
+              <div class="text-xs text-gray-400 hidden sm:block tracking-wider">
+                Kahoku Sake Brewery
+              </div>
             </div>
           </div>
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex items-center space-x-6 text-sm">
+            <a href="#highlights" class="text-gray-300 hover:text-white font-medium transition">Highlights</a>
+            <a href="#experience" class="text-gray-300 hover:text-white font-medium transition">Experience</a>
+            <a href="#included" class="text-gray-300 hover:text-white font-medium transition">What's Included</a>
+            <a href="#reviews" class="text-gray-300 hover:text-white font-medium transition">Reviews</a>
+            <a
+              href="#booking"
+              class="inline-flex items-center px-5 py-2.5 border border-white/30 text-white text-sm font-semibold hover:bg-white hover:text-navy-900 transition"
+            >
+              <i class="fa-solid fa-calendar-check mr-2"></i>
+              BOOK NOW
+            </a>
+          </div>
+          <!-- Mobile Hamburger Button -->
+          <button id="mobile-menu-btn" class="md:hidden text-white p-2 hover:text-amber-400 transition hamburger" aria-label="Toggle menu">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
         </div>
-        <div class="hidden md:flex items-center space-x-6 text-sm">
-          <a href="#highlights" class="text-gray-300 hover:text-white font-medium transition">Highlights</a>
-          <a href="#experience" class="text-gray-300 hover:text-white font-medium transition">Experience</a>
-          <a href="#included" class="text-gray-300 hover:text-white font-medium transition">What's Included</a>
-          <a href="#reviews" class="text-gray-300 hover:text-white font-medium transition">Reviews</a>
-          <a
-            href="#booking"
-            class="inline-flex items-center px-5 py-2.5 border border-white/30 text-white text-sm font-semibold hover:bg-white hover:text-navy-900 transition"
-          >
-            <i class="fa-solid fa-calendar-check mr-2"></i>
-            BOOK NOW
-          </a>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu md:hidden border-t border-white/10 bg-navy-950/98">
+          <div class="py-4 space-y-3">
+            <a href="#highlights" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/5 transition rounded">Highlights</a>
+            <a href="#experience" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/5 transition rounded">Experience</a>
+            <a href="#included" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/5 transition rounded">What's Included</a>
+            <a href="#reviews" class="block px-4 py-2 text-gray-300 hover:text-white hover:bg-white/5 transition rounded">Reviews</a>
+            <a
+              href="#booking"
+              class="block mx-4 mt-4 text-center px-5 py-2.5 border border-white/30 text-white text-sm font-semibold hover:bg-white hover:text-navy-900 transition rounded"
+            >
+              <i class="fa-solid fa-calendar-check mr-2"></i>
+              BOOK NOW
+            </a>
+          </div>
         </div>
       </div>
     </header>
@@ -450,7 +682,7 @@
               </p>
             </div>
             <div class="flex-shrink-0 mt-4 md:ml-auto md:w-64 md:relative md:-top-[110px]">
-              <img src="河北酒造旗.jpg" alt="河北酒造旗" class="w-full h-auto object-contain">
+              <img src="河北酒造旗.jpg" alt="河北酒造旗" class="w-full h-auto object-contain" loading="lazy" decoding="async">
             </div>
           </div>
         </section>
@@ -876,6 +1108,16 @@
 
           e.preventDefault();
 
+          // Close mobile menu if open
+          const mobileMenu = document.getElementById('mobile-menu');
+          const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+          if (mobileMenu && mobileMenu.classList.contains('active')) {
+            mobileMenu.classList.remove('active');
+            mobileMenuBtn.classList.remove('active');
+            mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+            mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+          }
+
           const rect = targetEl.getBoundingClientRect();
           const offset = window.pageYOffset + rect.top - (window.innerWidth >= 768 ? headerHeight + 12 : 70);
 
@@ -885,6 +1127,62 @@
           });
         });
       });
+    })();
+  </script>
+
+  <!-- Mobile Menu Toggle -->
+  <script>
+    (function() {
+      const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      const menuIcon = mobileMenuBtn?.querySelector('i');
+
+      if (mobileMenuBtn && mobileMenu && menuIcon) {
+        mobileMenuBtn.addEventListener('click', function() {
+          mobileMenu.classList.toggle('active');
+          mobileMenuBtn.classList.toggle('active');
+          
+          if (mobileMenu.classList.contains('active')) {
+            menuIcon.classList.remove('fa-bars');
+            menuIcon.classList.add('fa-times');
+          } else {
+            menuIcon.classList.remove('fa-times');
+            menuIcon.classList.add('fa-bars');
+          }
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', function(e) {
+          if (!mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+            if (mobileMenu.classList.contains('active')) {
+              mobileMenu.classList.remove('active');
+              mobileMenuBtn.classList.remove('active');
+              menuIcon.classList.remove('fa-times');
+              menuIcon.classList.add('fa-bars');
+            }
+          }
+        });
+      }
+    })();
+  </script>
+
+  <!-- Header Scroll Background Change -->
+  <script>
+    (function() {
+      const header = document.getElementById('main-header');
+      
+      if (!header) return;
+
+      function updateHeaderOnScroll() {
+        if (window.pageYOffset > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }
+
+      window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
+      updateHeaderOnScroll(); // Initial check
     })();
   </script>
 
@@ -949,13 +1247,10 @@
   <!-- Scroll fade in animation for sections -->
   <script>
     (function() {
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initScrollFadeIn);
-      } else {
-        initScrollFadeIn();
-      }
+      // Don't start scroll animations until loading is complete
+      // This will be called from loading screen script
       
-      function initScrollFadeIn() {
+      window.initScrollFadeIn = function() {
         if (!('IntersectionObserver' in window)) {
           // IntersectionObserverが使えない場合はアニメーションをスキップ
           document.querySelectorAll('section').forEach(function(section) {
@@ -987,6 +1282,61 @@
             observer.observe(section);
           }
         });
+      };
+    })();
+  </script>
+
+  <!-- Loading Screen Script -->
+  <script>
+    (function() {
+      const loadingScreen = document.getElementById('loading-screen');
+      const animationDuration = 5000; // 5 seconds to match fillUpNavy animation
+      
+      // Start site animations (hero section, etc.)
+      function startSiteAnimations() {
+        // Start hero animations
+        const heroElements = document.querySelectorAll('.hero-animate, .hero-animate-delay-1, .hero-animate-delay-3, .hero-title-fade');
+        heroElements.forEach(function(el) {
+          el.style.animationPlayState = 'running';
+        });
+        
+        // Trigger scroll fade-in animations after a short delay
+        setTimeout(function() {
+          if (typeof initScrollFadeIn === 'function') {
+            initScrollFadeIn();
+          }
+        }, 100);
+      }
+      
+      // Hide loading screen after animation completes
+      function hideLoadingScreen() {
+        if (loadingScreen) {
+          loadingScreen.classList.add('hidden');
+          // Remove from DOM after fade out completes and start animations immediately
+          setTimeout(function() {
+            if (loadingScreen.parentNode) {
+              loadingScreen.parentNode.removeChild(loadingScreen);
+            }
+            // Start site animations immediately after loading screen is removed
+            startSiteAnimations();
+          }, 300);
+        }
+      }
+      
+      // Wait for animation to complete (5 seconds) before hiding
+      // Also ensure page is loaded
+      function waitForLoadAndAnimation() {
+        // Wait for animation duration (5 seconds) exactly
+        const waitTime = animationDuration;
+        
+        setTimeout(hideLoadingScreen, waitTime);
+      }
+      
+      // Check if page is already loaded
+      if (document.readyState === 'complete') {
+        waitForLoadAndAnimation();
+      } else {
+        window.addEventListener('load', waitForLoadAndAnimation);
       }
     })();
   </script>

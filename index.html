@@ -213,24 +213,28 @@
       opacity: 0;
       animation: fadeInUp 1s ease-out forwards;
       animation-play-state: paused;
+      will-change: opacity, transform;
     }
     
     .hero-animate-delay-1 {
       opacity: 0;
       animation: fadeInUp 1s ease-out 0.3s both;
       animation-play-state: paused;
+      will-change: opacity, transform;
     }
     
     .hero-title-fade {
       opacity: 0;
       animation: fadeIn 2s ease-out forwards;
       animation-play-state: paused;
+      will-change: opacity;
     }
     
     .hero-animate-delay-3 {
       opacity: 0;
       animation: fadeInUp 1s ease-out 0.9s both;
       animation-play-state: paused;
+      will-change: opacity, transform;
     }
     
     /* Glow animation for journey steps */
@@ -379,12 +383,14 @@
       align-items: center;
       justify-content: center;
       z-index: 9999;
-      transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+      transition: opacity 0.1s ease-out, visibility 0.1s ease-out;
+      pointer-events: none;
     }
     
     .loading-screen.hidden {
       opacity: 0;
       visibility: hidden;
+      pointer-events: none;
     }
     
     /* Loading Image Container */
@@ -429,7 +435,7 @@
       filter: brightness(0) saturate(100%) invert(18%) sepia(55%) saturate(2000%) hue-rotate(200deg) brightness(0.6) contrast(1.2);
       clip-path: inset(100% 0 0 0);
       -webkit-clip-path: inset(100% 0 0 0);
-      animation: fillUpNavy 5s ease-in-out infinite;
+      animation: fillUpNavy 8s ease-in-out infinite;
     }
     
     @keyframes fillUpNavy {
@@ -1290,54 +1296,57 @@
   <script>
     (function() {
       const loadingScreen = document.getElementById('loading-screen');
-      const animationDuration = 5000; // 5 seconds to match fillUpNavy animation
+      if (!loadingScreen) return;
+      
+      const filledImage = loadingScreen.querySelector('.loading-image-filled');
+      if (!filledImage) return;
+      
+      // Animation completes at 50% (4 seconds), not 100%
+      const animationDuration = 8000; // 8 seconds total
+      const animationCompleteTime = animationDuration / 2; // 4 seconds (50% of 8s animation)
+      
+      // Prepare site animations in advance (but don't start them yet)
+      function prepareSiteAnimations() {
+        // Trigger scroll fade-in animations initialization (but they won't start until elements are visible)
+        if (typeof initScrollFadeIn === 'function') {
+          initScrollFadeIn();
+        }
+      }
       
       // Start site animations (hero section, etc.)
       function startSiteAnimations() {
         // Start hero animations
         const heroElements = document.querySelectorAll('.hero-animate, .hero-animate-delay-1, .hero-animate-delay-3, .hero-title-fade');
         heroElements.forEach(function(el) {
+          // Start animation immediately
           el.style.animationPlayState = 'running';
         });
-        
-        // Trigger scroll fade-in animations after a short delay
-        setTimeout(function() {
-          if (typeof initScrollFadeIn === 'function') {
-            initScrollFadeIn();
-          }
-        }, 100);
       }
       
-      // Hide loading screen after animation completes
+      // Hide loading screen after animation completes - immediate switch
       function hideLoadingScreen() {
-        if (loadingScreen) {
-          loadingScreen.classList.add('hidden');
-          // Remove from DOM after fade out completes and start animations immediately
-          setTimeout(function() {
-            if (loadingScreen.parentNode) {
-              loadingScreen.parentNode.removeChild(loadingScreen);
-            }
-            // Start site animations immediately after loading screen is removed
-            startSiteAnimations();
-          }, 300);
+        // Start site animations first (before hiding)
+        startSiteAnimations();
+        
+        // Hide immediately using display: none for instant switch
+        loadingScreen.style.display = 'none';
+        
+        // Remove from DOM immediately
+        if (loadingScreen.parentNode) {
+          loadingScreen.parentNode.removeChild(loadingScreen);
         }
       }
       
-      // Wait for animation to complete (5 seconds) before hiding
-      // Also ensure page is loaded
-      function waitForLoadAndAnimation() {
-        // Wait for animation duration (5 seconds) exactly
-        const waitTime = animationDuration;
-        
-        setTimeout(hideLoadingScreen, waitTime);
+      // Prepare site animations immediately
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', prepareSiteAnimations);
+      } else {
+        prepareSiteAnimations();
       }
       
-      // Check if page is already loaded
-      if (document.readyState === 'complete') {
-        waitForLoadAndAnimation();
-      } else {
-        window.addEventListener('load', waitForLoadAndAnimation);
-      }
+      // Use precise setTimeout with early trigger for seamless transition
+      // Timing: 3800ms (slightly before 4000ms) for immediate visual switch when animation visually completes
+      setTimeout(hideLoadingScreen, 3800);
     })();
   </script>
 </body>
